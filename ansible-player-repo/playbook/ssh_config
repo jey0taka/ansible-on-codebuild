@@ -1,0 +1,5 @@
+Host develop01
+  HostName XXX.XXX.XXX.XXX
+  User ec2-user
+  IdentityFile ./ssh-keys/KEY.pem
+  StrictHostKeyChecking no

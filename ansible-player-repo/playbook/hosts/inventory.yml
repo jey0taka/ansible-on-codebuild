@@ -1,0 +1,5 @@
+all:
+  children:
+    dev-server:
+      hosts:
+        develop01:

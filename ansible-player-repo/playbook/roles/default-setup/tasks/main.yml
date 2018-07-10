@@ -1,0 +1,10 @@
+---
+- name: locale at /etc/cloud/cloud.cfg
+  lineinfile: 'dest=/etc/cloud/cloud.cfg line="locale: {{locale}}"'
+- name: repo_upgrade at /etc/cloud/cloud.cfg
+  lineinfile: 'dest=/etc/cloud/cloud.cfg regexp="repo_upgrade\:" line="repo_upgrade: {{repo_upgrade}}"'
+- name: locale
+  shell: localectl set-locale 'LANG={{locale}}'
+
+- name: zone
+  shell: timedatectl set-timezone "{{zone}}"
